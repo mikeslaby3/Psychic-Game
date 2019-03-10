@@ -1,13 +1,13 @@
-// Creates an array that lists computer options a-z
+// Array that lists computer options a-z
 var computerChoices = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']; 
 
-// Creating variables to hold the number of wins, losses, guesses left, and guesses.
+// Variables that hold the number of wins, losses, guesses left, and guesses.
 var wins = 0;
 var losses = 0;
 var guessesLeft = 9;
 var guesses = [];
 
-// Randomly chooses a choice from the options array. This is the Computer's guess.
+// Randomly chooses a choice from the options array. This is the Computer's pick.
 var computerPick = computerChoices[Math.floor(Math.random() * computerChoices.length)];
 console.log(computerPick);
 
@@ -18,6 +18,7 @@ document.onkeyup = function(event) {
 
     var userPick = event.key;
 
+    // Conditional that recognizes if user inputs a letter
     var aToZKey = false;
     for (let index = 0; index < computerChoices.length; index++) {
         if (userPick === computerChoices[index]) {
@@ -25,6 +26,7 @@ document.onkeyup = function(event) {
         }   
     }
 
+    // Guess is logged only if user inputs a letter
     if (aToZKey == true) {
         guesses.push(userPick);
 
@@ -46,6 +48,7 @@ document.onkeyup = function(event) {
             }
         } 
     
+        // Method that writes the results in the HTML
         document.getElementById("wins-text").textContent = wins;
         document.getElementById("losses-text").textContent = losses;
         document.getElementById("guesses-left-text").textContent = guessesLeft;
