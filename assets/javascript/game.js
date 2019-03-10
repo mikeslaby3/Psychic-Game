@@ -34,6 +34,7 @@ document.onkeyup = function(event) {
             wins++;
             resetForNextTurn();
             guesses = [];
+            alert("You guessed correctly! It was " + userPick)
         } else {
             guessesLeft--;
             console.log(guessesLeft);
@@ -41,6 +42,7 @@ document.onkeyup = function(event) {
                 resetForNextTurn();
                 losses++;
                 guesses = [];
+                alert("You Lose!")
             }
         } 
     

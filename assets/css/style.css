@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("../images/folk-pattern-black.png");
+}
+
+.big-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    background-color: white;
+    height: 300px;
+    width: 700px;
+    text-align: center;
+    padding: 10%;
+    line-height: 30px;
+}
+
+.container {
+   margin-left: 60px;
+}
+
+#title {
+    font-family: 'Russo One', sans-serif;
+    font-size: 50px;
+    padding-bottom: 20px;
+    color: #8A2BE2;
+}
+
+#intro {
+    font-family: 'Bungee Inline', cursive;
+    color: #4B0082;
+    margin-bottom: 15px;
+}
+
+.scoreboard {
+    font-family: 'Righteous', cursive;
+    font-size: 25px;
+}
+
+.score {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 
+}
+
+#wins-text {
+    color: green;
+}
+
+#losses-text {
+    color: red;
+}
+
+#guesses-left-text {
+    color: orange;
+}
+
+#guesses-text {
+    letter-spacing: .3em;
+    color: aqua;
+}
+
+@media only screen and (max-width: 900px) {
+    .big-container {
+        width: 500px;
+    }
+
+    #psychic {
+        height: 220px;
+        width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10px;
+    }
+
+    #title {
+        font-size: 30px;
+    }
+
+    .scoreboard {
+        font-size: 20px;
+        line-height: 1.2em;
+    }
+
+}
+
+@media only screen and (max-width: 640px) {
+    .big-container {
+        flex-direction: column;
+        height: 550px;
+        width: 300px;
+    }
+
+    .container {
+        margin-left: 0;
+    }
+
+    #psychic {
+        height: 220px;
+        width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10px;
+    }
+
+    #title {
+        font-size: 30px;
+    }
+
+    .scoreboard {
+        font-size: 20px;
+        line-height: 1.2em;
+    }
+}
